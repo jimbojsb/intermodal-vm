@@ -1,0 +1,4 @@
+rancher:
+  docker:
+    tls: false
+    args: [daemon, --log-opt, max-size=25m, --log-opt, max-file=2, -s, overlay, -G, docker, -H, '0.0.0.0:2375', --userland-proxy=false]
