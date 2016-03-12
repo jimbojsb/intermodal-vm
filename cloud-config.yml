@@ -13,6 +13,6 @@ rancher:
       image: intermodal/sync:0.2
       restart: always
       volumes:
-      - /sync:/sync
+      - /home/sync:/sync
       ports:
       - 873:873
