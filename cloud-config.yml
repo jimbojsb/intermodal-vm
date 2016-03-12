@@ -9,6 +9,7 @@ rancher:
     intermodal-sync:
       labels:
       - io.rancher.os.scope=system
+      - io.rancher.os.after=network
       image: intermodal/sync:0.2
       restart: always
       volumes:
