@@ -1,7 +1,0 @@
-#cloud-config
-ssh_authorized_keys:
-- ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDFSxsxT8xh2cSRNtTAUyzi53AI1ryF/9Kk5YAOJujPs4Hgv1ExpCDfwosFAtl7V8S5llgFCtzE+Tfd4SkOmo+WI9Gw3BdEKECb8T0ObBIa6McQxctpy+8+RDgjkuEI0Jrhg8XgWcKlBNLiBTW0OIZaFBnDfNcmW3CK+aDliAzCkYa7zf3hE5AR6RGZmhOvxPzYKmHjEvYQ9igshrKCuaBGP9PDCWtbwiqwp1UFMXdZlWj7HxBzYM+2vXBAUuMerBNFkiaq1BRqYGONEo87njSakqkhN7Q0d9WjypDTKowiUIS0D7aSxxHROMm0u2qLxh4CDiLsDYBLNI0XWw3iZO/F
-rancher:
-  docker:
-    tls: false
-    args: [daemon, --log-opt, max-size=25m, --log-opt, max-file=2, -s, overlay, -G, docker, -H, '0.0.0.0:2375', --userland-proxy=false]
