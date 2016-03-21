@@ -3,7 +3,7 @@ cd ./tmp
 rm *.vdi
 rm *.iso
 
-VM="Intermodal-0.4-TMP"
+VM="Intermodal-0.4"
 
 #DL boot2docker iso
 wget https://github.com/boot2docker/boot2docker/releases/download/v1.9.1/boot2docker.iso
@@ -26,7 +26,7 @@ VBoxManage modifyvm $VM \
  --nictype1 virtio \
  --natpf1 docker,tcp,,2375,,2375 \
  --natpf1 ssh,tcp,,2222,,22 \
- --natpf1 sync,tcp,,2873,,2873 \
+ --natpf1 rsync,tcp,,2873,,2873 \
  --audio none \
  --ioapic on
 
@@ -44,6 +44,6 @@ VBoxManage storageattach $VM \
   --device 0 --type hdd --medium data.vdi
 
 # start vm
-VBoxManage startvm $vm --type headless
+VBoxManage startvm --type headless $VM
 
 cd ..

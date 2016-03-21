@@ -4,4 +4,4 @@ in vm, fdisk and format /dev/sdb(1)
 echo DOCKER_TLS=no >> /var/lib/boot2docker/profile
 echo DOCKER_STORAGE=overlay >> /var/lib/boot2docker/profile
 add bootlocal.sh
-run exportvm.sh in project root_
+run exportvm.sh in project root

@@ -1,8 +1,8 @@
 #!/bin/bash
 cd ./tmp
 rm *.ova
-VM="Intermodal-0.4-TMP"
+VM="Intermodal-0.4"
 OVA="Intermodal-0.4.ova"
 VBoxManage controlvm $VM poweroff
-VBoxManage export $VM -o $OVA --vsys 0 --product Intermodal
+VBoxManage export $VM -o $OVA --vsys 0 --product "Intermodal-0.4"
 VBoxManage unregistervm $VM --delete
