@@ -3,7 +3,7 @@ cd ./tmp
 rm *.vdi
 rm *.iso
 
-VM="Intermodal-0.4"
+VM="Intermodal-0.4.1"
 
 #DL boot2docker iso
 wget https://github.com/boot2docker/boot2docker/releases/download/v1.9.1/boot2docker.iso
@@ -27,6 +27,7 @@ VBoxManage modifyvm $VM \
  --natpf1 docker,tcp,,2375,,2375 \
  --natpf1 ssh,tcp,,2222,,22 \
  --natpf1 rsync,tcp,,2873,,2873 \
+ --natdnshostresolver1 on \
  --audio none \
  --ioapic on
 
